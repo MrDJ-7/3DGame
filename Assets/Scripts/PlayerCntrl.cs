@@ -18,9 +18,9 @@ public class PlayerCntrl : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
-        _rb.velocity = transform.TransformDirection(new Vector3(h, _rb.velocity.y, v)) * speed * Time.fixedDeltaTime;
+        // _rb.velocity = transform.TransformDirection(new Vector3(h, _rb.velocity.y, v)) * speed * Time.fixedDeltaTime;
 
-        // _rb.AddForce(new Vector3(h, _rb.velocity.y, v) * speed * Time.fixedDeltaTime);
+        _rb.AddForce(new Vector3(h, _rb.velocity.y, v) * speed * Time.fixedDeltaTime);
 
     }
 
